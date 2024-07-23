@@ -97,6 +97,7 @@ a comma delimited file with a header containing the following columns:
 OTHERPATH:
 - This directory/path should contain the following:
 
+- filter_functions_replicates.R  - The R function that is needed to process replicates. Do not open or make any changes to this script.
 - MethylationEPIC v2.0 Files   - the documentation of EPICv2 directly downloaded from Illumina. Contains the following:
   - EPIC-8v2-0_A1-190MappingInaccuracies/EPIC-8v2-0_A1-190MappingInaccuracies.csv   - inaccurately mapped probes.
   - EPIC-8v2-0_A1-FlaggedProbes/EPIC-8v2-0_A1-FlaggedProbes.csv   - probes flagged by Illumina as being problematic (poorly performing).
