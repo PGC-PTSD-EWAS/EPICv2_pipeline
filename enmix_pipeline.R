@@ -47,7 +47,7 @@ print(paste0("arg 5 SampleSheet: ", SampleSheet))
 cat("\n")
 ################################################################################
 # Saving the output
-sink(paste0(OUTPUTPATH, PROJECTNAME, "_",Sys.Date(), "_Output.txt"))
+sink(paste0(OUTPUTPATH, PROJECTNAME, "_",Sys.Date(), "_Output.txt"), split = TRUE)
 ################################################################################
 ## - Load in libraries.
 library(ENmix)
