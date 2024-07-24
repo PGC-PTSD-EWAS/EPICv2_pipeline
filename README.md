@@ -1,11 +1,11 @@
 # EPICv2_pipeline
 
 Usage:
-Rscript --vanilla enmix_pipeline.R /inputpath/for/raw_idats/ /outputpath/ /other/input/files/path/ project_name
+Rscript --vanilla enmix_pipeline.R /inputpath/for/raw_idats/ /outputpath/ /other/input/files/path/ project_name /my/sample/sheet
 
-- Usage command takes in 4 arguments in a command written on the terminal (excluding the script itself).
+- Usage command takes in 5 arguments in a command written on the terminal (excluding the script itself).
 - The script is written in R.
-- The script will raise an error if the 4 arguments are not included.
+- The script will raise an error if the 5 arguments are not included.
 - The paths need to have backslashes at the end of them.
 - Run script in same directory as filter_functions_replicates.R.
 
