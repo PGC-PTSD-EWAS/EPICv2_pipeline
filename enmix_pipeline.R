@@ -4,7 +4,7 @@
 ## Seyma Katrinli
 ## Purpose: EPICv2 QC
 
-## Usage: Rscript --vanilla enmix_pipeline.R /my/input/path/ /my/output/path/ /my/otherfile/path/ my_project_name
+## Usage: Rscript --vanilla enmix_pipeline.R /my/input/path/ /my/output/path/ /my/otherfile/path/ my_project_name /my/sample/sheet
 ## See README file for usage, input, and output information.
 
 ################################################################################
@@ -30,18 +30,20 @@ SampleSheet <- "/my/samplesheet/path/samplesheet"
 ## - Argument inputs
 ### - Setting global variables with args.
 args = commandArgs(trailingOnly=T)
-if (length(args)!=4) { stop("ERROR: Four args required. Exiting")
-}else if (length(args)==4){
+if (length(args)!=5) { stop("ERROR: Five args required. Exiting")
+}else if (length(args)==5){
   INPUTPATH=args[1]
   OUTPUTPATH=args[2]
   OTHERPATH=args[3]
   PROJECTNAME=args[4]
+  SampleSheet=args[5]
 }
 print("Input arguments:")
 print(paste0("arg 1 INPUTPATH: ", INPUTPATH))
 print(paste0("arg 2 OUTPUTPATH: ", OUTPUTPATH))
 print(paste0("arg 3 OTHERPATH: ", OTHERPATH))
 print(paste0("arg 4 PROJECTNAME: ", PROJECTNAME))
+print(paste0("arg 5 SampleSheet: ", SampleSheet))
 cat("\n")
 ################################################################################
 # Saving the output
