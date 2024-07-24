@@ -526,6 +526,9 @@ print("Save complete.")
 cat("\n")
 
 print("Saving the FINAL beta value data frames without the suffixes and without failed samples and controls.")
+all_samples_pass <-subset(all_samples_for_flagged, failed == FALSE & CONTROL == FALSE & ENmix_flags == "PASS")
+BETAFILE_PASS <- BETAFILE_suffix_adj[,colnames(BETAFILE_suffix_adj) %in% all_samples_pass$SampleID]
+print(paste0("Number of samples remaining after removing controls and failed samples: ", dim(all_samples_pass)[1]))
 save(BETAFILE_PASS, file=paste0(OUTPUTPATH, PROJECTNAME, "_betas_without_suffix_passQC.RData"))
 
 print("Saving pheno.csv updated with flags for ewastools control failures, ENmix internal check failures, and control issues, and sex prediction.")
