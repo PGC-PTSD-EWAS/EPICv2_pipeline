@@ -25,6 +25,10 @@ Dependencies:
 - data.table
 - stringr
 
+How to download the necessary annotation file: 
+- Download the annotation file from Peter at al., 2024 (Additional File 4) at https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-024-10027-5
+- Rename the file as pidsley2024.csv 
+- Put the file under MethylationEPICv2.0Files directory
 ###########################################################################################################################################################################
 
 IMPORTANT INFORMATION TO NOTE ON OUTPUT:
@@ -103,8 +107,7 @@ OTHERPATH:
   - EPIC-8v2-0_A1-FlaggedProbes/EPIC-8v2-0_A1-FlaggedProbes.csv   - probes flagged by Illumina as being problematic (poorly performing).
   - NoMapping_Pidsley.txt  - the non-mapping probes list by Peters, TJ., et al. 
 
-- pidsley2024.csv   - an updated EPICv2 manifest produced by Peters, TJ., et al., Pidsley, R. Characterisation and reproducibility of the \
-HumanMethylationEPIC v2.0 BeadChip for DNA methylation profiling. BMC Genomics 2024.
+- pidsley2024.csv   - an updated EPICv2 manifest produced by Peters, TJ., et al., Pidsley, R. Characterisation and reproducibility of the HumanMethylationEPIC v2.0 BeadChip for DNA methylation profiling. BMC Genomics 2024.
   - This is used for handling offtarget probes and probe replicate sets.
 
 
