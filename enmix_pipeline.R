@@ -499,11 +499,6 @@ print(paste0("Dimensions of beta file post replicate processing: ", dim(BETAFILE
 cat("\n")
 
 ################################################################################
-## - Returning a beta matrix without controls and fails
-all_samples_pass <-subset(all_samples_for_flagged, failed == FALSE & CONTROL == FALSE & ENmix_flags == "PASS")
-BETAFILE_PASS <- BETAFILE_suffix_adj[,colnames(BETAFILE_suffix_adj) %in% all_samples_pass$SampleID]
-print(paste0("Number of samples remaining after removing controls and failed samples: ", dim(all_samples_pass)[1]))
-################################################################################
 ## - Returning a beta matrix with suffixes and a beta matrix without suffixes.
 
 BETAFILE = as.data.frame(BETAFILE)
