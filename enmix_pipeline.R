@@ -199,7 +199,7 @@ print("Checking duplicates")
 snps <- getSnpBeta(RGset)
 genotypes <- call_genotypes(snps, learn = FALSE)
 donor_id <- enumerate_sample_donors(genotypes)
-names(donor_id) <- RGset@metadata[["meta"]][["sample_id"]]
+names(donor_id) <- colnames(snps)
 donor_id <- as.data.frame(donor_id)
 pheno <- merge(pheno, donor_id, by.x = "SampleID", by.y = "row.names")
 
